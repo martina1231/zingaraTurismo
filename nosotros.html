@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zíngara Turismo | Nosotros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              display: ['Anton', 'sans-serif'],
+              hand: ['Permanent Marker', 'cursive'],
+            },
+            colors: {
+              zingara: {
+                pink: '#FF00CC', purple: '#8A2BE2', cyan: '#00E5FF', orange: '#FF5500', yellow: '#FFD700', lime: '#CCFF00',
+              }
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-white selection:bg-zingara-pink selection:text-white flex flex-col min-h-screen">
+
+    <!-- NAVBAR COPIADA -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b-4 border-zingara-pink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <span class="font-display text-3xl tracking-wider text-zingara-cyan" style="text-shadow: 2px 2px 0 #FF00CC">ZÍNGARA</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Inicio</a>
+                        <a href="nosotros.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Nosotros</a>
+                        <a href="servicios.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Servicios</a>
+                        <a href="viajes.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Próximos Viajes</a>
+                        <a href="galeria.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Galería</a>
+                        <a href="contacto.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Contacto</a>
+                        <a href="viajes.html" class="bg-zingara-pink hover:bg-zingara-purple text-white px-4 py-2 rounded-full font-bold shadow-lg transform hover:scale-105 transition-all flex items-center gap-2">
+                            <i data-lucide="phone" width="18"></i> Reservar
+                        </a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-zingara-cyan hover:text-white hover:bg-zingara-purple focus:outline-none">
+                        <i id="icon-menu" data-lucide="menu" width="30"></i>
+                        <i id="icon-close" data-lucide="x" width="30" class="hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-indigo-900 border-t border-white/10 h-screen">
+            <div class="px-2 pt-8 pb-3 space-y-4 sm:px-3 flex flex-col items-center">
+                <a href="index.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Inicio</a>
+                <a href="nosotros.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Nosotros</a>
+                <a href="servicios.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Servicios</a>
+                <a href="viajes.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Próximos Viajes</a>
+                <a href="galeria.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Galería</a>
+                <a href="contacto.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        <div class="pt-24 pb-20 bg-white relative overflow-hidden min-h-screen">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    
+                    <!-- Image Side -->
+                    <div class="w-full lg:w-1/3 relative group h-fit">
+                        <div class="absolute inset-0 bg-zingara-cyan rounded-3xl transform translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                        <div class="relative rounded-3xl overflow-hidden border-4 border-black aspect-[3/4]">
+                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Zíngara Bus Vibes" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="absolute -top-6 -right-6 bg-zingara-yellow text-black font-black p-4 rounded-full border-4 border-black transform rotate-12 shadow-lg">
+                            <span class="text-xl">100%</span><br/>FUN
+                        </div>
+                    </div>
+
+                    <!-- Text Side -->
+                    <div class="w-full lg:w-2/3">
+                        <h2 class="font-display text-5xl md:text-6xl mb-6 text-black">
+                            SOBRE <span class="text-zingara-pink">ZÍNGARA</span>
+                        </h2>
+                        <div class="h-2 w-32 bg-gradient-to-r from-zingara-orange to-zingara-purple mb-8 rounded-full"></div>
+                        
+                        <div class="space-y-4 text-gray-800 text-lg leading-relaxed font-medium mb-10">
+                            <p>
+                                En <span class="font-bold text-zingara-purple">Zíngara Turismo</span> trabajamos con un propósito claro: ofrecer experiencias de viaje seguras, organizadas y de alta calidad, acompañando a cada pasajero con la seriedad y el compromiso que nos caracterizan. Somos una empresa joven en crecimiento, pero con una fuerte vocación de servicio y una visión moderna del turismo regional.
+                            </p>
+                            <p>
+                                Creemos que viajar es mucho más que trasladarse. Es descubrir, conectar y disfrutar. Por eso, además de brindar un servicio confiable y cuidadosamente planificado, buscamos que cada viaje refleje la energía positiva y el espíritu colorido que identifican a nuestra marca. Nuestro enfoque combina profesionalismo con calidez humana, generando un ambiente agradable y cercano para todos los que nos eligen.
+                            </p>
+                            <p>
+                                En cada recorrido priorizamos la seguridad, el confort y la organización, garantizando que cada pasajero viva una experiencia placentera y libre de preocupaciones. A la vez, trabajamos para que nuestros viajes transmitan esa chispa de alegría y emoción que hace que Zíngara Turismo sea una opción distinta, vibrante y llena de vida.
+                            </p>
+                            <p class="font-bold text-zingara-pink">
+                                Con dedicación y esfuerzo constante, seguimos creciendo para consolidarnos como una empresa referente en el sector, comprometida con brindar momentos memorables y acompañar a nuestros pasajeros en el arte de viajar.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-indigo-50 p-6 rounded-2xl border-2 border-dashed border-zingara-purple hover:bg-white transition-colors shadow-sm">
+                                <h3 class="font-display text-2xl mb-3 text-zingara-purple tracking-wide">Misión</h3>
+                                <p class="text-sm leading-relaxed text-gray-700">
+                                    Nuestra misión es ofrecer experiencias de viaje que combinen profesionalismo, seguridad y calidez humana. Trabajamos para que cada pasajero se sienta acompañado, cómodo y confiado, brindando un servicio organizado y transparente.
+                                    <br/><br/>
+                                    En Zíngara Turismo creemos que viajar es un momento especial y queremos que cada recorrido esté lleno de color, alegría y energía positiva, sin dejar de lado la responsabilidad que guía cada una de nuestras acciones.
+                                </p>
+                            </div>
+                            <div class="bg-pink-50 p-6 rounded-2xl border-2 border-dashed border-zingara-pink hover:bg-white transition-colors shadow-sm">
+                                <h3 class="font-display text-2xl mb-3 text-zingara-pink tracking-wide">Visión</h3>
+                                <p class="text-sm leading-relaxed text-gray-700">
+                                    Aspiramos a consolidarnos como una agencia líder en el turismo regional, destacándonos por la calidad de nuestros servicios, la atención cercana y el compromiso con cada pasajero.
+                                    <br/><br/>
+                                    Nuestro objetivo es crecer manteniendo nuestra esencia: una propuesta alegre, vibrante y humana. Queremos que Zíngara Turismo sea sinónimo de confianza y emoción, eligiéndose por quienes buscan vivir viajes memorables y llenos de vida.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER COPIADO -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-8 border-zingara-orange mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <span class="font-display text-3xl tracking-wider text-zingara-cyan block mb-4" style="text-shadow: 2px 2px 0 #FF00CC">ZÍNGARA</span>
+                    <p class="text-gray-400">Viajar no es solo trasladarse, es vivir. Unite a la experiencia más colorida del turismo.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-zingara-lime uppercase mb-4">Contacto</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2"><i data-lucide="phone" width="18" class="text-zingara-pink"></i> +54 9 376 484-8444</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" width="18" class="text-zingara-cyan"></i> info@zingaraturismo.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-zingara-yellow uppercase mb-4">Redes Sociales</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/zingara_turismo?igsh=dHV4Z2IxNDF0NHdw" target="_blank" class="bg-white text-black p-2 rounded-lg hover:bg-zingara-pink hover:text-white transition-colors"><i data-lucide="instagram" width="24"></i></a>
+                        <a href="#" class="bg-white text-black p-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors"><i data-lucide="facebook" width="24"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">© 2024 Zíngara Turismo. Todos los derechos reservados. Diseño Tropical.</div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

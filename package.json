@@ -1,5 +1,5 @@
 {
-  "name": "zíngara-turismo",
+  "name": "copy-of-zíngara-turismo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,11 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
     "lucide-react": "^0.556.0",
-    "react-router-dom": "6.22.3",
-    "@remix-run/router": "1.15.3",
+    "react": "^19.2.1",
+    "react-router-dom": "^7.10.1",
     "nodemailer": "^7.0.11"
   },
   "devDependencies": {

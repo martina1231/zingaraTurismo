@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zíngara Turismo | Galería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              display: ['Anton', 'sans-serif'],
+              hand: ['Permanent Marker', 'cursive'],
+            },
+            colors: {
+              zingara: {
+                pink: '#FF00CC', purple: '#8A2BE2', cyan: '#00E5FF', orange: '#FF5500', yellow: '#FFD700', lime: '#CCFF00',
+              }
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-white selection:bg-zingara-pink selection:text-white flex flex-col min-h-screen">
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b-4 border-zingara-pink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <span class="font-display text-3xl tracking-wider text-zingara-cyan" style="text-shadow: 2px 2px 0 #FF00CC">ZÍNGARA</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Inicio</a>
+                        <a href="nosotros.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Nosotros</a>
+                        <a href="servicios.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Servicios</a>
+                        <a href="viajes.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Próximos Viajes</a>
+                        <a href="galeria.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Galería</a>
+                        <a href="contacto.html" class="nav-link text-white hover:text-zingara-cyan font-bold uppercase text-sm tracking-widest transition-all duration-300 pb-1">Contacto</a>
+                        <a href="viajes.html" class="bg-zingara-pink hover:bg-zingara-purple text-white px-4 py-2 rounded-full font-bold shadow-lg transform hover:scale-105 transition-all flex items-center gap-2">
+                            <i data-lucide="phone" width="18"></i> Reservar
+                        </a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-zingara-cyan hover:text-white hover:bg-zingara-purple focus:outline-none">
+                        <i id="icon-menu" data-lucide="menu" width="30"></i>
+                        <i id="icon-close" data-lucide="x" width="30" class="hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-indigo-900 border-t border-white/10 h-screen">
+            <div class="px-2 pt-8 pb-3 space-y-4 sm:px-3 flex flex-col items-center">
+                <a href="index.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Inicio</a>
+                <a href="nosotros.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Nosotros</a>
+                <a href="servicios.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Servicios</a>
+                <a href="viajes.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Próximos Viajes</a>
+                <a href="galeria.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Galería</a>
+                <a href="contacto.html" class="text-white hover:bg-zingara-pink hover:text-white block px-3 py-4 rounded-md text-2xl font-bold uppercase">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        <section class="pt-24 pb-20 bg-white min-h-screen">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 class="font-display text-5xl text-center mb-12">
+                GALERÍA <span class="text-zingara-cyan">TROPICAL</span>
+              </h2>
+              
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+                <!-- Img 1 -->
+                <div class="relative group overflow-hidden rounded-2xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,0,204,1)] rotate-1 hover:rotate-0 transition-all duration-300 hover:z-10 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-end p-4">
+                      <span class="text-white font-bold uppercase tracking-wider">#ZingaraTrip</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Moment 1" class="w-full h-64 object-cover">
+                </div>
+                <!-- Img 2 -->
+                <div class="relative group overflow-hidden rounded-2xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,0,204,1)] -rotate-1 hover:rotate-0 transition-all duration-300 hover:z-10 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-end p-4">
+                      <span class="text-white font-bold uppercase tracking-wider">#ZingaraTrip</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1570784332176-16144a305865?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Moment 2" class="w-full h-64 object-cover">
+                </div>
+                <!-- Img 3 -->
+                <div class="relative group overflow-hidden rounded-2xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,0,204,1)] rotate-1 hover:rotate-0 transition-all duration-300 hover:z-10 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-end p-4">
+                      <span class="text-white font-bold uppercase tracking-wider">#ZingaraTrip</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Moment 3" class="w-full h-64 object-cover">
+                </div>
+                <!-- Img 4 -->
+                <div class="relative group overflow-hidden rounded-2xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,0,204,1)] -rotate-1 hover:rotate-0 transition-all duration-300 hover:z-10 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-end p-4">
+                      <span class="text-white font-bold uppercase tracking-wider">#ZingaraTrip</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1504150558240-0b4fd8946624?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Moment 4" class="w-full h-64 object-cover">
+                </div>
+                <!-- Img 5 -->
+                <div class="relative group overflow-hidden rounded-2xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,0,204,1)] rotate-1 hover:rotate-0 transition-all duration-300 hover:z-10 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-end p-4">
+                      <span class="text-white font-bold uppercase tracking-wider">#ZingaraTrip</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Moment 5" class="w-full h-64 object-cover">
+                </div>
+                <!-- Img 6 -->
+                <div class="relative group overflow-hidden rounded-2xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,0,204,1)] -rotate-1 hover:rotate-0 transition-all duration-300 hover:z-10 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-end p-4">
+                      <span class="text-white font-bold uppercase tracking-wider">#ZingaraTrip</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Moment 6" class="w-full h-64 object-cover">
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-8 border-zingara-orange mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <span class="font-display text-3xl tracking-wider text-zingara-cyan block mb-4" style="text-shadow: 2px 2px 0 #FF00CC">ZÍNGARA</span>
+                    <p class="text-gray-400">Viajar no es solo trasladarse, es vivir. Unite a la experiencia más colorida del turismo.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-zingara-lime uppercase mb-4">Contacto</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2"><i data-lucide="phone" width="18" class="text-zingara-pink"></i> +54 9 376 484-8444</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" width="18" class="text-zingara-cyan"></i> info@zingaraturismo.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-zingara-yellow uppercase mb-4">Redes Sociales</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/zingara_turismo?igsh=dHV4Z2IxNDF0NHdw" target="_blank" class="bg-white text-black p-2 rounded-lg hover:bg-zingara-pink hover:text-white transition-colors"><i data-lucide="instagram" width="24"></i></a>
+                        <a href="#" class="bg-white text-black p-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors"><i data-lucide="facebook" width="24"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">© 2024 Zíngara Turismo. Todos los derechos reservados. Diseño Tropical.</div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
