@@ -94,7 +94,7 @@
                       <div class="bg-zingara-cyan p-3 rounded-full text-black">
                         <i data-lucide="mail" width="24"></i>
                       </div>
-                      info@zingaraturismo.com
+                      barbolilian51@gmail.com
                     </div>
                   </div>
       
@@ -113,7 +113,7 @@
       
                 <!-- Form -->
                 <div class="bg-white/10 p-8 rounded-3xl backdrop-blur-sm border border-white/20">
-                  <form id="contactForm" class="space-y-4">
+                  <form action="https://formspree.io/f/xpwvlgal" method="POST" class="space-y-4">
                     <div>
                       <label for="nombre" class="block text-sm font-bold uppercase tracking-wider mb-1 text-zingara-lime">Nombre</label>
                       <input type="text" id="nombre" name="nombre" required class="w-full bg-black/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-zingara-pink transition-colors" placeholder="Tu nombre">
@@ -167,57 +167,8 @@
     </footer>
     <script src="js/main.js"></script>
     <script>
-        // Lógica de formulario específica para esta página
-        const form = document.getElementById('contactForm');
-        const statusDiv = document.getElementById('statusMessage');
-        const submitBtn = document.getElementById('submitBtn');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            // UI Loading
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span>Enviando...</span> <div class="animate-spin h-4 w-4 border-2 border-white rounded-full border-t-transparent"></div>';
-            statusDiv.classList.add('hidden');
-
-            const formData = {
-                nombre: document.getElementById('nombre').value,
-                email: document.getElementById('email').value,
-                mensaje: document.getElementById('mensaje').value
-            };
-
-            try {
-                const response = await fetch('/api/send-email', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
-
-                const data = await response.json();
-
-                statusDiv.classList.remove('hidden');
-                if (response.ok) {
-                    // Success UI
-                    statusDiv.className = 'bg-green-500/20 border border-green-500 text-green-200 p-3 rounded-lg flex items-center gap-2';
-                    statusDiv.innerHTML = '<i data-lucide="check-circle" width="20"></i> Mensaje enviado con éxito.';
-                    lucide.createIcons(); // Re-init icons for the new HTML
-                    form.reset();
-                    submitBtn.innerHTML = '<span>Enviado</span> <i data-lucide="check-circle" width="18"></i>';
-                    submitBtn.classList.replace('bg-zingara-pink', 'bg-green-600');
-                } else {
-                    throw new Error(data.message || 'Error al enviar');
-                }
-            } catch (error) {
-                // Error UI
-                statusDiv.classList.remove('hidden');
-                statusDiv.className = 'bg-red-500/20 border border-red-500 text-red-200 p-3 rounded-lg flex items-center gap-2';
-                statusDiv.innerHTML = `<i data-lucide="alert-circle" width="20"></i> ${error.message}`;
-                lucide.createIcons();
-                
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<span>Enviar Mensaje</span> <i data-lucide="send" width="18"></i>';
-            }
-        });
-    </script>
-</body>
-</html>
+document.querySelector("form").addEventListener("submit", function() {
+    const btn = document.getElementById("submitBtn");
+    btn.innerHTML = "Enviando...";
+});
+</script>
