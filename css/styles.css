@@ -51,14 +51,15 @@ html {
 .logo-zingara {
     font-family: 'Cormorant Garamond', serif !important;
     font-weight: 700;
-    color: #FF00CC !important;
-    -webkit-text-stroke: 4px #000 !important;
-    letter-spacing: 3px;
+    color: #FF00CC !important;   /* Rosa vibrante */
+    -webkit-text-stroke: 3px #000 !important; /* Borde negro */
+    text-stroke: 3px #000 !important;
     display: inline-block;
 }
 
 .logo-eslogan {
     font-family: 'Great Vibes', cursive !important;
-    color: white !important;
-    display: block;
+    color: #FFFFFF !important;
+    font-size: 18px;
 }
+
