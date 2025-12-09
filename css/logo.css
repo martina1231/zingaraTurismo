@@ -1,1 +1,23 @@
+/* --- ESTILOS UNIFICADOS PARA EL LOGO ZÍNGARA --- */
 
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-zingara {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 38px; /* NAVBAR SIZE */
+    color: #FF00CC;
+    text-shadow: 2px 2px 0px black;
+    letter-spacing: 2px;
+}
+
+.logo-eslogan {
+    font-family: 'Great Vibes', cursive;
+    font-size: 22px;
+    color: white;
+    margin-top: -6px;
+}
